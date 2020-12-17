@@ -1,5 +1,6 @@
-## Do not push to this repo!
-## FORK this repo
+## Do NOT push to or fork this repo
+
+Clone this repository, and create your own based on it.
 
 ### Goal:
 
@@ -66,4 +67,4 @@ http://localhost:4200/api/products
 #### Submission instructions:
 
 - Deploy the application to Netlify
-- Send us a link to the repo, along with the netlify link.  No further action is required.
+- Send us a link to the repo, along with the netlify link. No further action is required.
