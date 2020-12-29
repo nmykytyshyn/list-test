@@ -1,0 +1,19 @@
+<div class="row toggle-mode-button">
+    <button class="btn" (click)="switchMode()">Switch mode</button>
+</div>
+
+<div class="row product-list-container" [ngClass]="{'grid-view': !listMode}">
+    <div class="row product-container" *ngFor="let product of products">
+        <div class="list-rank-container center-xs middle-xs">
+            <div class="list-rank">{{product.productId}}</div>
+        </div>
+        <div class="list-img-container center-xs middle-xs">
+            <div class="list-img">
+                <img src="{{product.imagePath}}">
+            </div>
+        </div>
+        <div class="product">
+            <app-product [mode]="listMode" [product]="product"></app-product>
+        </div>
+    </div>
+</div>

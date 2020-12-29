@@ -1,0 +1,52 @@
+<div [ngClass]="{'grid-view-prod': !mode}">
+    <div class="row product-container">
+        <div class="product-container-statistic">
+            <div class="row">
+                <div class="col-md-12 product-container-header">
+                    <span class="title">{{product.title}}</span>
+                    <span class="product-container-img">
+                        <img src="/assets/svg-icons/check.svg">
+                    </span>
+                    <span class="product-container-img days-ago">
+                        <span>{{daysAgo(product.createdAt)}} Days Ago</span>
+                    </span>
+                    <span class="product-container-img dropship">
+                        Dropship
+                    </span>
+                    <span class="product-container-img">
+                        <img src="/assets/svg-icons/broken-tag.svg">
+                    </span>
+                    <span class="product-container-img">
+                        <img src="/assets/svg-icons/visibility-tag.svg">
+                    </span>
+                    <span class="product-container-img">
+                        <img src="/assets/svg-icons/edit-product-tag.svg">
+                    </span>
+                    <span class="price price-grid">${{product.price}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 product-container-rating">
+                    <i class="icon-trophy grid-view"></i>
+                    <span class="grid-view">223</span>
+                    <i class="icon-pin"></i>
+                    <span>{{product.tags}}</span>
+                    <i class="icon-star"></i>
+                    <span>{{product.rating}}</span>
+                    <i class="icon-shield"></i>
+                    <span>{{product.percentage}}%</span>
+                    <ng-container *ngIf="product.ePacket">
+                        <i class="icon-epack"></i>
+                        <span>ePack</span>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="product-container-price">
+            <span class="price">${{product.price}}</span>
+            <i class="icon-eye"></i>
+            <i class="icon-heart"></i>
+            <i class="icon-add"></i>
+        </div>
+    </div>
+</div>

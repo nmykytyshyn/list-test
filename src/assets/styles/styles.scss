@@ -20,6 +20,7 @@
   line-height: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #d3d6dc;
 }
 
 .icon-lock:before {
@@ -48,4 +49,8 @@
 }
 .icon-eye:before {
   content: "\0049";
+}
+
+body {
+    background: #e5e5e5;
 }

@@ -1,0 +1,177 @@
+@mixin gridviewprod {
+    .product-container {
+        width: 265px;
+        min-width: 265px;
+        padding: 0;
+        height: 68px;
+        background: none;
+
+        .product-container-price {
+            display: none;
+        }
+
+        .product-container-statistic {
+            min-width: 265px;
+
+            .row {
+                margin: 0;
+            }
+        }
+
+        .product-container-header {
+            font-size: 14px;
+            height: 34px;
+            background: #ffffff;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .product-container-img {
+                display: none;
+            }
+
+            .price-grid {
+                display: inline-block;
+                font-size: 14px;
+                margin-right: 0;
+                font-weight: 600;
+                color: #000000;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .title {
+                font-weight: normal;
+            }
+        }
+
+        .product-container-rating {
+            min-width: 265px;
+            margin-top: 1px;
+            font-size: 14px;
+            background: #ffffff;
+            height: 34px;
+            border-radius: 0px 0px 10px 10px;
+            display: flex;
+            align-items: center;
+
+            .grid-view {
+                display: inline-block;
+            }
+
+            span {
+                font-weight: normal;
+                margin-right: 4px;
+                margin-left: 4px;
+            }
+        }
+
+    }
+}
+:host {
+    .product-container {
+        height: 130px;
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 31px 40px;
+        display: flex;
+        justify-content: space-between;
+        min-width: 805px;
+    
+        .product-container-statistic {
+            min-width: 505px;
+        }
+    
+        .product-container-header {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+    
+            .price-grid {
+                display: none;
+            }
+    
+            .title {
+                margin-right: 10px;
+            }
+    
+            .product-container-img {
+                margin-right: 5px;
+                font-size: 8px;
+                display: inline-block;
+    
+                &.days-ago {
+                    padding: 4px 10px;
+                    color: #a9b0be;
+                    background: #f1f2f6;
+                    border-radius: 30px;
+                }
+    
+                &.dropship {
+                    padding: 4px 11px;
+                    color: #8f23fe;
+                    background: #f2e6ff;
+                    border-radius: 30px;
+    
+                }
+            }
+        }
+    
+        .product-container-rating {
+            margin-top: 14px;
+            font-size: 20px;
+            color: #d3d6dc;
+            font-family: Arial, Helvetica, sans-serif;
+    
+            .grid-view {
+                display: none;
+            }
+    
+            span {
+                font-weight: bold;
+                margin-right: 10px;
+                margin-left: 5px;
+            }
+        }
+    
+        .product-container-price {
+            display: flex;
+            align-items: center;
+            max-width: 335px;
+            justify-content: flex-end;
+            
+            .price {
+                font-size: 26px;
+                margin-right: 54px;
+                font-weight: bold;
+                color: #0fcb5a;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+    
+            i {
+                font-size: 34px;
+                margin-right: 16px;
+    
+                &.icon-heart {
+                    font-size: 20px;
+                }
+    
+                &.icon-add {
+                    font-size: 20px;
+                    font-weight: normal;
+                    margin: 0;
+                }
+            }
+    
+        }
+    }
+    
+    .grid-view-prod {
+        @include gridviewprod;
+    }
+    
+    @media screen and (max-width:1200px) {
+        @include gridviewprod;
+    }
+}
