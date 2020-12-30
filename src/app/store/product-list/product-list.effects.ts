@@ -16,8 +16,8 @@ export class ProductListEffects {
       ofType(ProductListActions.BeginProductListAction),
       mergeMap(() =>
         this.listTestService.getList().pipe(
-          map((data: Product[]) => {
-            return ProductListActions.GetProductList({ payload: data });
+          map((data: any) => {
+            return ProductListActions.GetProductList({ payload: data.products });
           }),
           catchError((error: Error) => {
             return of(ProductListActions.ErrorProductListAction(error));

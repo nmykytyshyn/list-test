@@ -7,7 +7,7 @@ import { Product } from '../models/Product';
   providedIn: 'root'
 })
 export class ListTestService {
-  private ApiURL = 'http://localhost:4200/api/products';
+  private ApiURL = 'assets/db.json';
 
   constructor(private httpclient: HttpClient) { }
 
